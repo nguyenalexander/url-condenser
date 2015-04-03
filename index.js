@@ -30,6 +30,6 @@ app.get('/:hash', function(req,res){
   })
 })
 
-app.listen(process.env.port || 3000, function(){
+app.listen(process.env.Port || 3000, function(){
   console.log("Hello, server is up and running.");
 })
