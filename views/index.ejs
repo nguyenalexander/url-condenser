@@ -1,8 +1,10 @@
 <% include partials/header %>
 <form action="/links" method="POST" class="form">
-  <legend>Enter a URL to be condensed!   <small>your url must contain a protocol</small></legend>
+  <legend>Enter a URL to be condensed!   <small>(your url must contain a protocol)</small></legend>
   <div class="form-group">
     <input type="text" class="form-control" name="q" placeholder="Input a url here.">
   </div>
 </form>
+<h> how many links have been shortened? </h>
+<p> <%=totalcount%> </p>
 <% include partials/footer %>

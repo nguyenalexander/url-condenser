@@ -12,7 +12,10 @@ app.use('/links', linksCtrl);
 app.use(express.static(__dirname + "/public"));
 
 app.get('/', function(req,res){
-  res.render('index');
+  db.link.findAll().then(function(e){
+    var count = e.length
+    res.render('index', {totalcount: count});
+  })
 })
 
 app.get('/:hash', function(req,res){
